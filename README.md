@@ -3,7 +3,7 @@
 
 A starter kit that uses **Hooks-based** components and D3 version 5 modules.
 
-React and D3 both want to manage the DOM which can be a challenge bringing D3 into a React project. This project demonstrates how hooks are used to load data for the chart with `d3-fetch` and then provide a reference to an `<svg>` element that D3 then manipulates to produce a simple horizontal bar chart. It is oriented at providing a good start for a CRA project using D3.
+React and D3 both want to manage the DOM which can be a challenge bringing D3 into a React project. This project demonstrates how hooks are used to load data for the chart with `d3-fetch` and then provide a reference to an `<svg>` element. D3 then extends that `<svg>` to produce a simple horizontal bar chart. It is oriented at providing a good start for a CRA project using D3.
 
 The D3 margin convention is used to define margin & svg width and height. React renders the initial svg and then D3 extrapolates from that element.
 
