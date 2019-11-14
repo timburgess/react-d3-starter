@@ -9,9 +9,9 @@ const margin = { top: 80, right: 60, bottom: 80, left: 60 }
 const width = 600 - margin.left - margin.right
 const height = 600 - margin.top - margin.bottom
 
-const BarChart = ({ data }) => {
-  console.log('data', data)
+const color = ['#f05440', '#d5433d', '#b33535', '#283250']
 
+const BarChart = ({ data }) => {
   const d3svg = useRef(null)
 
   useEffect(() => {
@@ -39,7 +39,8 @@ const BarChart = ({ data }) => {
         .attr('class', 'bar-header')
         .attr('transform', `translate(0, ${-margin.top / 2})`)
         .append('text')
-        .append('tspan').text('Horizontal bar chart')
+        .append('tspan')
+        .text('Horizontal bar chart')
 
       // draw bars
       svg
@@ -51,7 +52,9 @@ const BarChart = ({ data }) => {
         .attr('y', d => yScale(d.genre))
         .attr('width', d => xScale(d.revenue))
         .attr('height', yScale.bandwidth())
-        .style('fill', 'dodgerblue')
+        .style('fill', function(d, i) {
+          return color[i % 4] // use colors in sequence
+        })
 
       // draw axes
       const xAxis = axisBottom(xScale)
@@ -60,8 +63,8 @@ const BarChart = ({ data }) => {
         .attr('class', 'x axis')
         .attr('transform', `translate(0,${height + margin.bottom / 3})`)
         .call(xAxis)
-        
-        const yAxis = axisLeft(yScale).tickSize(0)
+
+      const yAxis = axisLeft(yScale).tickSize(0)
       svg
         .append('g')
         .attr('class', 'y axis')
