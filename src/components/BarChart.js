@@ -4,7 +4,7 @@ import { max } from 'd3-array'
 import { scaleLinear, scaleBand } from 'd3-scale'
 import { axisLeft, axisBottom } from 'd3-axis'
 
-// margin convention
+// margin convention often used with D3
 const margin = { top: 80, right: 60, bottom: 80, left: 60 }
 const width = 600 - margin.left - margin.right
 const height = 600 - margin.top - margin.bottom
