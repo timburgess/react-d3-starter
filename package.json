@@ -1,6 +1,6 @@
 {
   "name": "react-d3-starter",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "license": "MIT",
   "dependencies": {
     "d3-array": "2.0.3",
