@@ -1,0 +1,5 @@
+v0.3.0
+
+- add a Changelog.txt!
+- upgrade to React 17
+- upgrade D3 modules
