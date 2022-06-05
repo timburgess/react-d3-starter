@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { select } from 'd3-selection'
 import { max } from 'd3-array'
 import { scaleLinear, scaleBand } from 'd3-scale'
